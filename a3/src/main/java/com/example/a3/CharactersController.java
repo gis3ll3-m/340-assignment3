@@ -2,6 +2,7 @@ package com.example.a3;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,16 @@ public class CharactersController{
     public Characters addCharacters(@RequestBody Characters character){
         return service.addCharacter(character);
     }
+
+    @GetMapping("/{Id}")
+        public ResponseEntity<Characters> getCharacterById(@PathVariable Long Id){
+            Characters character = service.getCharacterById(Id);
+            if(character != null){
+                return ResponseEntity.ok(character);
+            } else{
+                return ResponseEntity.notFound().build();
+            }
+        }
 
     @PutMapping("/{Id}")
         public Characters updateCharacters(@PathVariable Long Id, @RequestBody Characters character){

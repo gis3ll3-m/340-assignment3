@@ -32,6 +32,10 @@ public class CharactersService{
         .orElse(null);
     }
 
+    public Characters getCharacterById(Long Id){
+        return repository.findById(Id).orElse(null);
+    }
+
     public void deleteCharacter(Long Id){
         repository.deleteById(Id);
     }
