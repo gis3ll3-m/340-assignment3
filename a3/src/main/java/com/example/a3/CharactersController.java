@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -46,9 +47,13 @@ public class CharactersController{
             return service.getCharactersByBellyBadge(bellyBadge);
         }    
 
-        @GetMapping("/search/{name}")
-        public List <Characters> searcCharacters(@PathVariable String name){
-            return service.searchCharacterByName(name);
+        @GetMapping("/search")
+        public List <Characters> searcCharacters(@RequestParam(required = false) String name){
+            if(name != null){
+                return service.searchCharacterByName(name);
+            } else{
+                return service.getAllCharacters();
+            }
         }
 
 
