@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CharactersRepository extends JpaRepository<Characters, Long>{
     List<Characters> findByBellyBadge(String bellyBadge);
-    List<Characters> findBYNameContaining(String name);
+    List<Characters> findByNameContaining(String name);
 }
