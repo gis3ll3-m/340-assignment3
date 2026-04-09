@@ -51,4 +51,15 @@ public class UIController {
         return "redirect:/characters/";
     }
 
+    @GetMapping("/edit/{Id}")
+    public String showEditForm(@PathVariable Long Id, Model model){
+        model.addAttribute("character", service.getCharacterById(Id));
+        return "edit-character-form";
+    }
+
+    @PostMapping("/update/{Id}")
+    public String updateCharacter(@PathVariable Long Id, Characters character){
+        service.updateCharacters(Id, character);
+        return "redirect:/characters/details/" + Id;
+    }
 }

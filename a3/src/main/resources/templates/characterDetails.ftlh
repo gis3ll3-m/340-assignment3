@@ -49,6 +49,10 @@
                 <li><b>FUN FACT:</b> ${character.funFact}</li>
             </ul>
 
+            <a href="/characters/edit/${character.characterId}" class="pure-button pure-button-primary">
+                Edit
+            </a>
+
             <form action="/characters/delete/${character.characterId}" method="POST">
                 <button type="submit" class="pure-button pure-button-error">Delete</button>
             </form>
