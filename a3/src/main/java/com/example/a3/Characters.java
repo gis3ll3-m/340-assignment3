@@ -23,6 +23,13 @@ public class Characters {
 
     private String bellyBadge;
     private String specialAbility;
+    private String imageUrl;
+
+    @Column(name="fav_food")
+    private String favFood;
+
+    @Column(name="fun_fact")
+    private String funFact;
 
     public Characters() {
     }
@@ -70,5 +77,32 @@ public class Characters {
 
     public void setSpecialAbility(String specialAbility){
         this.specialAbility = specialAbility;
+    }
+
+    //Image
+    public String getImageUrl(){
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl){
+        this.imageUrl = imageUrl;
+    }
+
+    //Fav food
+    public String getFavFood(){
+        return favFood;
+    }
+
+    public void setFavFood(String favFood){
+        this.favFood = favFood;
+    }
+
+    //Fun Fact
+    public String getFunFact(){
+        return funFact;
+    }
+
+    public void setFunFact(String funFact){
+        this.funFact = funFact;
     }
 }

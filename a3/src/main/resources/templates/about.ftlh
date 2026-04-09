@@ -14,14 +14,14 @@
 <body>
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href=""><img src="logo.jpeg" alt="Carebears Logo" class="logo"></a>
+            <a class="pure-menu-heading" href=""><img src="/logo.jpeg" alt="Carebears Logo" class="logo"></a>
 
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="details.html" class="pure-menu-link">Details</a></li>
-                <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item"><a href="add-character.html" class="pure-menu-link">Add new Character</a>
+                <li class="pure-menu-item"><a href="/characters/" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="/characters/details/1" class="pure-menu-link">Details</a></li>
+                <li class="pure-menu-item"><a href="/characters/about" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="/characters/add" class="pure-menu-link">Add new Character</a>
                 </li>
                 <!--Search -->
                 <li class="pure-menu-item">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <img src="bear-banner.jpg" alt="Carebears" class="about-img">
+    <img src="/bear-banner.jpg" alt="Carebears" class="about-img">
     <div class="content" style="margin-top: 20px; padding: 20px;">
         <h1>About this project</h1>
         <p> I chose this theme because it was my favorite childhood show. I recently showed the show to my little sister

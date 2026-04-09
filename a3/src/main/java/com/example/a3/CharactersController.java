@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/characters")
+@RequestMapping("/api/characters")
 public class CharactersController{
 
     private final CharactersService service;
@@ -33,7 +33,7 @@ public class CharactersController{
         return service.addCharacter(character);
     }
 
-    @GetMapping("/{Id}")
+    @GetMapping("/{id}")
         public ResponseEntity<Characters> getCharacterById(@PathVariable Long Id){
             Characters character = service.getCharacterById(Id);
             if(character != null){
@@ -43,12 +43,12 @@ public class CharactersController{
             }
         }
 
-    @PutMapping("/{Id}")
+    @PutMapping("/{id}")
         public Characters updateCharacters(@PathVariable Long Id, @RequestBody Characters character){
             return service.updateCharacters(Id, character);
         }
 
-    @DeleteMapping("/{Id}")
+    @DeleteMapping("/{id}")
         public void deleteCharacter(@PathVariable Long Id){
             service.deleteCharacter(Id);
         }

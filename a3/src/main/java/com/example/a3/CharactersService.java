@@ -27,6 +27,8 @@ public class CharactersService{
             character.setDescription(updatedCharacter.getDescription());
             character.setBellyBadge(updatedCharacter.getBellyBadge());
             character.setSpecialAbility(updatedCharacter.getSpecialAbility());
+            character.setFavFood(updatedCharacter.getFavFood());
+            character.setFunFact(updatedCharacter.getFunFact());
             return repository.save(character);
         })
         .orElse(null);
