@@ -45,4 +45,10 @@ public class UIController {
         return "redirect:/characters/";
     }
 
+    @PostMapping("/delete/{Id}")
+    public String deleteCharacter(@PathVariable Long Id) {
+        service.deleteCharacter(Id);
+        return "redirect:/characters/";
+    }
+
 }

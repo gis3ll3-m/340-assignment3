@@ -23,7 +23,7 @@
                 <li class="pure-menu-item"><a href="/characters/details/1" class="pure-menu-link">Details</a></li>
                 <li class="pure-menu-item"><a href="/characters/about" class="pure-menu-link">About</a></li>
                 <li class="pure-menu-item"><a href="/characters/add" class="pure-menu-link">Add new Character</a>
-                <!--Search -->
+                    <!--Search -->
                 <li class="pure-menu-item">
                     <form class="pure-form">
                         <input class="pure-input-rounded" type="search" placeholder="Search" />
@@ -48,6 +48,10 @@
                 <li><b>Favorite Food:</b> ${character.favFood}</li>
                 <li><b>FUN FACT:</b> ${character.funFact}</li>
             </ul>
+
+            <form action="/characters/delete/${character.characterId}" method="POST">
+                <button type="submit" class="pure-button pure-button-error">Delete</button>
+            </form>
         </div>
     </div>
 

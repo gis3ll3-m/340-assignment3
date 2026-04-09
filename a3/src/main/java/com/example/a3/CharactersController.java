@@ -33,7 +33,7 @@ public class CharactersController{
         return service.addCharacter(character);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{Id}")
         public ResponseEntity<Characters> getCharacterById(@PathVariable Long Id){
             Characters character = service.getCharacterById(Id);
             if(character != null){
@@ -43,12 +43,12 @@ public class CharactersController{
             }
         }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{Id}")
         public Characters updateCharacters(@PathVariable Long Id, @RequestBody Characters character){
             return service.updateCharacters(Id, character);
         }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{Id}")
         public void deleteCharacter(@PathVariable Long Id){
             service.deleteCharacter(Id);
         }

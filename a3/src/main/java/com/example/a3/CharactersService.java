@@ -49,4 +49,6 @@ public class CharactersService{
     public List <Characters> searchCharacterByName(String name){
         return repository.findByNameContaining(name);
     }
+
+    
 }
