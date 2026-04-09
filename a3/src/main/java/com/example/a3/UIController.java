@@ -29,10 +29,15 @@ public class UIController {
         Characters character = service.getCharacterById(Id);
 
         if (character == null) {
-            return "not-found";
+            return "redirect:/characters/not-found";
         }
         model.addAttribute("character", character);
         return "characterDetails";
+    }
+
+    @GetMapping("/not-found")
+    public String notFound(){
+        return "not-found";
     }
 
     @GetMapping("/about")

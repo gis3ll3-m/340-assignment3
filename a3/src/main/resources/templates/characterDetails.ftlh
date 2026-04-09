@@ -33,15 +33,16 @@
         </div>
     </div>
 
-
     <div class="pure-g" style="padding: 20px; align-items: center;">
 
         <div class="pure-u-1 pure-u-md-1-2">
             <img src="${character.imageUrl!'/default.jpeg'}" alt="Grumpy Bear" class="detail-img">
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
+          
             <h1>${character.name}</h1>
             <p class="detail-desc">${character.description}</p>
+
             <ul class="bear-details">
                 <li> <b>Belly Badge:</b> ${character.bellyBadge}</li>
                 <li><b>Special Ability:</b> ${character.specialAbility}</li>
