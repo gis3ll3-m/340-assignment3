@@ -25,7 +25,13 @@ public class UIController {
 
     @GetMapping("/details/{Id}")
     public String getCharactersByID(@PathVariable long Id, Model model) {
-        model.addAttribute("character", service.getCharacterById(Id));
+
+        Characters character = service.getCharacterById(Id);
+
+        if (character == null) {
+            return "not-found";
+        }
+        model.addAttribute("character", character);
         return "characterDetails";
     }
 
@@ -52,13 +58,13 @@ public class UIController {
     }
 
     @GetMapping("/edit/{Id}")
-    public String showEditForm(@PathVariable Long Id, Model model){
+    public String showEditForm(@PathVariable Long Id, Model model) {
         model.addAttribute("character", service.getCharacterById(Id));
         return "edit-character-form";
     }
 
     @PostMapping("/update/{Id}")
-    public String updateCharacter(@PathVariable Long Id, Characters character){
+    public String updateCharacter(@PathVariable Long Id, Characters character) {
         service.updateCharacters(Id, character);
         return "redirect:/characters/details/" + Id;
     }
