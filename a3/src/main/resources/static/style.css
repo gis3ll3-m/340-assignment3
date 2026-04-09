@@ -1,0 +1,112 @@
+.home-menu {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #0e0d0d;
+}
+
+.home-menu .pure-menu-link{
+    color: #D32A40;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.content {
+    margin-top: 90px;
+    margin-left: 20px;
+    padding-top: 50px;
+
+}
+
+.bear-card {
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #0e0d0d;
+    border-radius: 10px;
+
+}
+
+.bear-desc {
+
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 10px;
+}
+
+.bear-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Details page styles */
+.detail-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+
+    margin-top: 90px;
+    padding-top: 40px;
+
+    border: dodgerblue dotted;
+    border-width: 5px;
+    border-radius: 15px;
+
+
+}
+
+/* Add character styles */
+.form-container {
+    margin-top: 100px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+
+    margin-top: 15px;
+}
+
+.add-character-body .content {
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.add-character-body .pure-form{
+    text-align: left;
+    
+}
+
+.add-character-body .pure-input-1-2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.add-character-body .pure-button {
+    display: block;
+    margin: 20px auto;
+
+}
+
